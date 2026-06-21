@@ -23,5 +23,4 @@ router.get("/Report", [attendance_Mid.GetMonthlyReport], (req, res) => {
         res.status(200).json(req.ItemsData);
     }
     else
-        return res.status(500).json({message: res.err});
-});
+        return res.status(400).json({status:"ERROR", message: res.err});});
