@@ -1,5 +1,5 @@
-let tableName = "attendance_records";
-let employeesTable = "employees";
+let tableName="attendance_records";
+let employeesTable="employees";
 
 async function SaveEmployee(worker_id, full_name){
     const Query = `
