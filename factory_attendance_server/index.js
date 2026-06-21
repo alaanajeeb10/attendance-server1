@@ -7,8 +7,7 @@ const app = express();
 app.use(express.json({limit:"1mb"}));
 const cors = require('cors');
 app.use(cors({
-    origin: "http://localhost:4387",
-    credentials: true
+    origin: ["http://localhost:4387","http://localhost:5173"],    credentials: true
 }));
 
 var bodyParser = require('body-parser');
