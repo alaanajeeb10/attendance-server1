@@ -12,11 +12,9 @@ async function SaveEmployee(worker_id, full_name){
 }
 
 async function AddEntry(req,res,next){
-    let worker_id = req.body.worker_id || "";
-    let full_name = req.body.full_name || "";
-    let note = req.body.note || "";
-    note = note.substring(0,255);    worker_id = worker_id.trim();
-    full_name = full_name.trim();
+    let worker_id   = (req.body.worker_id   || "").trim();
+    let full_name   = (req.body.full_name   || "").trim();
+    let note        = (req.body.note        || "").trim().substring(0,255);
     res.ok = false;
     res.err = "";
 
