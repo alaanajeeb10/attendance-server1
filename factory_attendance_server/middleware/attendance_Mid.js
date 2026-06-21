@@ -99,7 +99,7 @@ async function GetMonthlyReport(req,res,next){
     res.err = "";
 
     if(worker_id === "" || month === "" || year === ""){
-        res.err = "wrong parameters";
+        res.err="Missing required parameters";
         return next();
     }
 
