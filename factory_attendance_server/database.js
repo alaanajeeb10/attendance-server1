@@ -19,6 +19,5 @@ let pool = mysql.createPool({
     keepAliveInitialDelay: 0
 });
 if(pool !== undefined){
-    console.log("my sql pool created")
-};
+    console.log("MySQL pool created successfully")};
 module.exports = { pool:pool };
