@@ -20,8 +20,7 @@ async function AddEntry(req,res,next){
     res.ok = false;
     res.err = "";
 
-    if(worker_id === "" || full_name === ""){
-        res.err = "wrong parameters";
+    if(worker_id.trim() === "" || full_name.trim() === ""){        res.err = "wrong parameters";
         return next();
     }
 
