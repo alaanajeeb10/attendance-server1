@@ -49,3 +49,4 @@ GET  http://localhost:6127/api/ATT/Report?worker_id=216622415&month=1&year=2026
 ## הערה
 
 הקוד כתוב בשיטת הקורס: Router + Middleware + GenObj_Mid + res.ok/res.err.
+המערכת כוללת צד שרת Node.js, בסיס נתונים MySQL, רישום כניסה, רישום יציאה ודוח חודשי לפי עובד.
