@@ -128,8 +128,10 @@ async function GetMonthlyReport(req,res,next){
     }
 
     res.ok = true;
-    req.ItemsData = {list:rows};
-    next();
+    req.ItemsData={
+        list:rows,
+        count:rows.length
+    };    next();
 }
 
 module.exports = {
