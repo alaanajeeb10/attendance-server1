@@ -4,8 +4,7 @@ process.env.TZ = "Asia/Jerusalem";
 const express = require('express');
 const port = 6127;
 const app = express();
-app.use(express.json());
-
+app.use(express.json({limit:"1mb"}));
 const cors = require('cors');
 app.use(cors({
     origin: "http://localhost:4387",
