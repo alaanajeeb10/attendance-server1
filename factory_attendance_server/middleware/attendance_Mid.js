@@ -15,7 +15,8 @@ async function AddEntry(req,res,next){
     let worker_id = req.body.worker_id || "";
     let full_name = req.body.full_name || "";
     let note      = req.body.note      || "";
-
+    worker_id = worker_id.trim();
+    full_name = full_name.trim();
     res.ok = false;
     res.err = "";
 
