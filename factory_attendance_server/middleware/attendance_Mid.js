@@ -54,8 +54,8 @@ async function AddEntry(req,res,next){
 async function AddExit(req,res,next){
     let worker_id = req.body.worker_id || "";
     let full_name = req.body.full_name || "";
-    let note      = req.body.note      || "";
-
+    let note = req.body.note || "";
+    note = note.substring(0,255);
     res.ok = false;
     res.err = "";
 
