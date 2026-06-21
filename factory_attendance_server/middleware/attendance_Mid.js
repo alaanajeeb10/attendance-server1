@@ -116,8 +116,7 @@ async function GetMonthlyReport(req,res,next){
         WHERE ar.employee_code = ?
         AND MONTH(ar.record_date) = ?
         AND YEAR(ar.record_date) = ?
-        ORDER BY ar.record_date, ar.record_time
-    `;
+        ORDER BY action_date DESC, action_time DESC    `;
 
     let values = [worker_id, month, year];
 
