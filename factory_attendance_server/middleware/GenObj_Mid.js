@@ -5,8 +5,7 @@ async function QueryExecSimpleReply(Query,values=[]) {
         [rows] = await promisePool.query(Query,values);
         return rows;
     } catch (err) {
-        console.log(err);
-        return false;
+        console.log("SQL ERROR:", err.sqlMessage || err.message);        return false;
     }
 }
 module.exports = { QueryExecSimpleReply };
